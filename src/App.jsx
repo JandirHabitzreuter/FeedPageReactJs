@@ -27,8 +27,7 @@ const posts = [
     content: [
       { type: 'paragraph', content: 'Salve' },
       { type: 'paragraph', content: 'Testando conteudo de um post' },
-      { type: 'link', content: 'jane.design/doctorcare' },
-      { type: 'link', content: 'jane.design/doctorcare' },
+      { type: 'link', content: 'jane.design/doctorcare' },   
     ],
     publishedAt: new Date('2023-01-10 20:00:00'),
   },
@@ -48,6 +47,7 @@ export function App() {
         {posts.map(post => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
